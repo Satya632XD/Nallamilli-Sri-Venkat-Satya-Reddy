@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nallamilli Sri Venkat Satya Reddy | Satya | Satya Reddy</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            cosmic: {
+              950: '#070910',
+              900: '#0d111e',
+              800: '#141b2d',
+              700: '#1e2942',
+            },
+            phoenix: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            rift: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-cosmic-950 dark:text-slate-100 min-h-screen antialiased selection:bg-amber-500/30 selection:text-amber-200 transition-colors duration-300">
+
+  <!-- Sticky Navigation -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800/80 bg-white/85 dark:bg-cosmic-950/85 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <button type="button" data-nav="overview" class="flex items-center gap-2.5 text-left group focus:outline-none">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-cyan-500 flex items-center justify-center text-cosmic-950 font-display font-bold text-lg shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+          S
+        </span>
+        <div>
+          <span class="block font-display font-bold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white leading-none">Satya's Studio</span>
+          <span class="block text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Satya Reddy</span>
+        </div>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Primary Navigation">
+        <button type="button" data-nav="overview" class="nav-btn px-3.5 py-2 rounded-lg text-sm font-medium transition-colors">Overview</button>
+        <button type="button" data-nav="journey" class="nav-btn px-3.5 py-2 rounded-lg text-sm font-medium transition-colors">My Journey</button>
+        <button type="button" data-nav="projects" class="nav-btn px-3.5 py-2 rounded-lg text-sm font-medium transition-colors">Projects</button>
+        <button type="button" data-nav="mind" class="nav-btn px-3.5 py-2 rounded-lg text-sm font-medium transition-colors">Mind &amp; Craft</button>
+        <button type="button" data-nav="cinema" class="nav-btn px-3.5 py-2 rounded-lg text-sm font-medium transition-colors">Cinema</button>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button type="button" id="themeToggle" aria-label="Toggle color theme" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-cosmic-800 transition-colors text-sm">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <button type="button" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-cosmic-800 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-cosmic-900 px-4 py-3 space-y-1">
+      <button type="button" data-nav="overview" class="nav-btn-mobile block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium">Overview</button>
+      <button type="button" data-nav="journey" class="nav-btn-mobile block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium">My Journey</button>
+      <button type="button" data-nav="projects" class="nav-btn-mobile block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium">Projects</button>
+      <button type="button" data-nav="mind" class="nav-btn-mobile block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium">Mind &amp; Craft</button>
+      <button type="button" data-nav="cinema" class="nav-btn-mobile block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium">Cinema</button>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+
+    <!-- ========================================================= -->
+    <!-- VIEW 1: OVERVIEW (ABOUT ME, AMBITIONS, TIMELINE, BELIEFS) -->
+    <!-- ========================================================= -->
+    <section id="view-overview" class="view-section active space-y-12">
+      <!-- Hero Banner -->
+      <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl">
+        <img src="assets/hero-studio.jpg" alt="Satya's Studio cosmic chess and geometric banner" class="w-full h-72 sm:h-96 object-cover object-center" />
+        <div class="absolute inset-0 bg-gradient-to-t from-cosmic-950 via-cosmic-950/75 to-cosmic-950/25"></div>
+        <div class="absolute inset-0 p-6 sm:p-10 flex flex-col justify-end">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold tracking-wide uppercase w-fit mb-3">
+            Satya's Studio · About Me
+          </div>
+          <h1 class="font-display text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight max-w-4xl">
+            Nallamilli Sri Venkat Satya Reddy
+          </h1>
+          <p class="mt-2 text-sm sm:text-base text-amber-300/95 font-medium">Satya · Satya Reddy</p>
+          <p class="mt-3 text-slate-200 text-sm sm:text-lg max-w-2xl leading-relaxed">
+            Learning, creating, and improving across chess, speedcubing, software engineering, paleontology, and art.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <button type="button" data-nav="projects" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-cosmic-950 font-semibold text-sm transition-colors shadow-lg shadow-amber-500/25">
+              Explore My Projects
+            </button>
+            <button type="button" data-nav="journey" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium text-sm backdrop-blur-sm transition-colors">
+              Read My Journey
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Who I Am + Quick Profile Facts -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 glass-card rounded-2xl p-6 sm:p-8 space-y-4">
+          <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">01 · Who I Am</div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">A Student &amp; Creator Building My Own Path</h2>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            I am <strong>Nallamilli Sri Venkat Satya Reddy (Satya Reddy)</strong>, a student and a creator with a lot of interests that all revolve around one thing: <strong>learning, creating, and improving</strong>.
+          </p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            I created <strong>Satya's Studio</strong> as a place to bring all of these interests together. It is my personal creative space where I can showcase the things I build, study, experiment with, and create.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-5">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-cyan-500">A Few Things About Me</div>
+            <h3 class="font-display text-xl font-bold mt-1 text-slate-900 dark:text-white">Quick Profile</h3>
+            <dl class="mt-4 space-y-3 text-sm">
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-slate-800">
+                <dt class="text-slate-500 dark:text-slate-400">Born</dt>
+                <dd class="font-semibold text-slate-900 dark:text-white">December 2012</dd>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-slate-800">
+                <dt class="text-slate-500 dark:text-slate-400">Based in</dt>
+                <dd class="font-semibold text-slate-900 dark:text-white">Andhra Pradesh, India</dd>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <dt class="text-slate-500 dark:text-slate-400">Occupation</dt>
+                <dd class="font-semibold text-slate-900 dark:text-white">Student</dd>
+              </div>
+            </dl>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 italic leading-relaxed">
+            I'm still at the beginning of my journey, so this page will change as I learn, compete, create, and achieve more.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 Long-Term Ambitions -->
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">Long-Term Ambitions</div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">My Five Core Pursuits</h2>
+          </div>
+          <span class="text-xs text-slate-500 dark:text-slate-400">Select any pursuit to open its full journey</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <button type="button" data-jump-discipline="paleontology" class="glass-card rounded-2xl p-5 text-left hover:border-amber-500/60 hover:-translate-y-1 transition-all group">
+            <span class="text-3xl block mb-3">🦖</span>
+            <span class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">Paleontologist</span>
+            <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">Evolution &amp; ancient ecosystems</span>
+          </button>
+          <button type="button" data-jump-discipline="chess" class="glass-card rounded-2xl p-5 text-left hover:border-amber-500/60 hover:-translate-y-1 transition-all group">
+            <span class="text-3xl block mb-3">♟️</span>
+            <span class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">Chess Master</span>
+            <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">Tournaments, tactics &amp; FIDE path</span>
+          </button>
+          <button type="button" data-jump-discipline="speedcubing" class="glass-card rounded-2xl p-5 text-left hover:border-amber-500/60 hover:-translate-y-1 transition-all group">
+            <span class="text-3xl block mb-3">🧩</span>
+            <span class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">Speedcuber</span>
+            <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">WCA events &amp; CFOP speed</span>
+          </button>
+          <button type="button" data-jump-discipline="dev" class="glass-card rounded-2xl p-5 text-left hover:border-amber-500/60 hover:-translate-y-1 transition-all group">
+            <span class="text-3xl block mb-3">💻</span>
+            <span class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">App &amp; Game Creator</span>
+            <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">Apps, 3D games &amp; Kaira engine</span>
+          </button>
+          <button type="button" data-jump-discipline="art" class="glass-card rounded-2xl p-5 text-left hover:border-amber-500/60 hover:-translate-y-1 transition-all group col-span-2 sm:col-span-1">
+            <span class="text-3xl block mb-3">🎨</span>
+            <span class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors">Artist</span>
+            <span class="block text-xs text-slate-500 dark:text-slate-400 mt-1">Drawing, concept &amp; visual design</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- What I've Achieved So Far (Interactive Year Filter) -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-cyan-500">Milestones</div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">What I've Achieved So Far</h2>
+          </div>
+          <div class="flex flex-wrap gap-2" id="timelineFilters">
+            <button type="button" data-year="all" class="year-filter px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-cosmic-950">All Years</button>
+            <button type="button" data-year="2022" class="year-filter px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-cosmic-800 text-slate-700 dark:text-slate-300">2022</button>
+            <button type="button" data-year="2025" class="year-filter px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-cosmic-800 text-slate-700 dark:text-slate-300">2025</button>
+            <button type="button" data-year="2026" class="year-filter px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-cosmic-800 text-slate-700 dark:text-slate-300">2026</button>
+          </div>
+        </div>
+
+        <div id="timelineContainer" class="space-y-6"></div>
+
+        <p class="text-sm text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 pt-4">
+          This isn't a list of everything I've done. It's a snapshot of the journey so far.
+        </p>
+      </div>
+
+      <!-- How I'm Moving Forward + Things I Love -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-4">
+          <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">Goals Ahead</div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">How I'm Moving Forward</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-300">
+            There are still many things I haven't achieved yet, and that's okay. These are goals I'm working toward:
+          </p>
+          <ul class="space-y-2.5 text-sm text-slate-700 dark:text-slate-200">
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Reach Master-level chess</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Continue improving my competitive cubing results</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Publish more apps and games</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Continue developing my own technology and tools</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Build deeper knowledge in paleontology</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Continue improving as an artist</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Grow Satya's Studio</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-0.5">✦</span><span>Keep turning ideas into real projects</span></li>
+          </ul>
+          <p class="text-xs font-semibold text-cyan-600 dark:text-cyan-400 pt-2">
+            Achievements are what I've already done. Goals are where I'm going next.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="text-xs font-semibold uppercase tracking-wider text-cyan-500">Curiosity Fuel</div>
+            <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Things I Love</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Some of the things that keep me curious and motivated:</p>
+            <div class="flex flex-wrap gap-2.5 pt-1">
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30">♟️ Chess</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 border border-cyan-500/30">🧩 Speedcubing</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">🦖 Dinosaurs &amp; Paleontology</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-pink-500/15 text-pink-700 dark:text-pink-300 border border-pink-500/30">🎨 Drawing</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 border border-indigo-500/30">💻 Programming</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-violet-500/15 text-violet-700 dark:text-violet-300 border border-violet-500/30">🎮 Games</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-sky-500/15 text-sky-700 dark:text-sky-300 border border-sky-500/30">🌌 Space &amp; Black Holes</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-teal-500/15 text-teal-700 dark:text-teal-300 border border-teal-500/30">🔬 Science</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-lime-500/15 text-lime-700 dark:text-lime-300 border border-lime-500/30">⚽ Football</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-orange-500/15 text-orange-700 dark:text-orange-300 border border-orange-500/30">📚 Learning</span>
+              <span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/30">🛠️ Creating Things</span>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-100 dark:bg-cosmic-900/90 border border-slate-200 dark:border-slate-800 space-y-3">
+            <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">What's Next?</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              I'm still figuring out exactly where each path will take me. Maybe I'll become a Chess Master. Maybe I'll spend years studying prehistoric life. Maybe I'll build games played by thousands of people. Maybe I'll create software that becomes something much bigger than I originally imagined.
+            </p>
+            <p class="text-sm font-semibold text-slate-900 dark:text-white">
+              For now, I'm working toward all of them. This is only the beginning.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Believe -->
+      <div class="glass-card rounded-2xl p-6 sm:p-10 space-y-6 border-amber-500/25">
+        <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">What I Believe</div>
+        <blockquote class="font-display text-xl sm:text-3xl font-bold text-slate-900 dark:text-white leading-snug max-w-4xl">
+          “I don't want to only use things. I want to understand how they work and eventually build my own.”
+        </blockquote>
+        <p class="text-sm text-slate-600 dark:text-slate-300">That idea connects many of my interests — for me, curiosity is most useful when it turns into something tangible.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 pt-2">
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+            <div class="font-display font-bold text-slate-900 dark:text-white">♟️ Chess</div>
+            <div class="text-xs text-amber-600 dark:text-amber-400 mt-1 font-medium">study → build</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+            <div class="font-display font-bold text-slate-900 dark:text-white">🎮 Games</div>
+            <div class="text-xs text-cyan-600 dark:text-cyan-400 mt-1 font-medium">experiment → create</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+            <div class="font-display font-bold text-slate-900 dark:text-white">🧩 Cubing</div>
+            <div class="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-medium">analyze → improve</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+            <div class="font-display font-bold text-slate-900 dark:text-white">🎨 Art</div>
+            <div class="text-xs text-pink-600 dark:text-pink-400 mt-1 font-medium">experiment → create</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+            <div class="font-display font-bold text-slate-900 dark:text-white">🦖 Paleontology</div>
+            <div class="text-xs text-violet-600 dark:text-violet-400 mt-1 font-medium">research → document</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 2: MY JOURNEY & HOW IT ALL STARTED                   -->
+    <!-- ========================================================= -->
+    <section id="view-journey" class="view-section space-y-8">
+      <div class="space-y-2">
+        <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">02 · My Journey &amp; Origin Stories</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">How Every Interest Started &amp; Grew</h2>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base">
+          Each interest developed differently, but they all led to the same place: I wanted to create, understand, and improve.
+        </p>
+      </div>
+
+      <!-- Discipline Tabs -->
+      <div class="flex flex-wrap gap-2" id="disciplineTabs">
+        <button type="button" data-discipline="chess" class="disc-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all">♟️ Chess</button>
+        <button type="button" data-discipline="speedcubing" class="disc-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all">🧩 Speedcubing</button>
+        <button type="button" data-discipline="dev" class="disc-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all">💻 App &amp; Game Dev</button>
+        <button type="button" data-discipline="paleontology" class="disc-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all">🦖 Paleontology</button>
+        <button type="button" data-discipline="art" class="disc-tab px-4 py-2.5 rounded-xl text-sm font-semibold transition-all">🎨 Art</button>
+      </div>
+
+      <!-- Dynamic Discipline Content -->
+      <div id="disciplineContent" class="glass-card rounded-3xl p-6 sm:p-10 space-y-8"></div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 3: PROJECTS & INTERACTIVE MECHANICS                  -->
+    <!-- ========================================================= -->
+    <section id="view-projects" class="view-section space-y-10">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div class="space-y-2">
+          <div class="text-xs font-semibold uppercase tracking-wider text-cyan-500">03 · Software &amp; Games</div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">My Current Projects</h2>
+          <p class="text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base">
+            “When I can't find exactly what I want, I would rather learn how to build it.”
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2" id="projectFilters">
+          <button type="button" data-pfilter="all" class="proj-filter px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-cosmic-950">All Projects</button>
+          <button type="button" data-pfilter="game" class="proj-filter px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-cosmic-800 text-slate-700 dark:text-slate-300">Apps &amp; Games</button>
+          <button type="button" data-pfilter="engine" class="proj-filter px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-cosmic-800 text-slate-700 dark:text-slate-300">Engine &amp; Sandbox</button>
+        </div>
+      </div>
+
+      <!-- Project 1: Chess The Phoenix Core -->
+      <article data-pcat="game" class="project-card glass-card rounded-3xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 relative min-h-[260px]">
+            <img src="assets/chess-phoenix-core.jpg" alt="Chess The Phoenix Core key art" class="w-full h-full object-cover" />
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cosmic-950/80 border border-amber-400/40 text-amber-300 text-xs font-semibold backdrop-blur-sm">
+              Available on Google Play
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 space-y-5">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">Chess App · Custom Variant</div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">♟️ Chess The Phoenix Core</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                A standard chess game featuring a custom mode called <strong>The Phoenix Core</strong>, where each player secretly carries a “Phoenix” piece that can rescue their King from checkmate once per game.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900/90 border border-slate-200 dark:border-slate-800 space-y-1.5">
+                <div class="font-semibold text-slate-900 dark:text-white">🔥 The Phoenix &amp; Dice Rule</div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Starts on your King's square (<strong>E1</strong> for White, <strong>E8</strong> for Black). It cannot capture or block. Every <strong>3 of your turns</strong>, normal moves are blocked until you roll the die and move the Phoenix (a free action that resets the 3-turn counter). It cannot land on your own pieces, and sliding pieces stop when they hit one.
+                </p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900/90 border border-slate-200 dark:border-slate-800 space-y-1.5">
+                <div class="font-semibold text-slate-900 dark:text-white">👑 The Revival &amp; Safety Rules</div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  If checkmated, your King teleports to wherever your Phoenix is, the Phoenix disappears (once per game), and play continues. <strong>Revival fails</strong> if the Phoenix's square is attacked by an enemy piece, if it's still on the King's square, or if teleporting leaves you in check again.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interactive Phoenix Die Roller -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-cyan-500/10 border border-amber-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div class="space-y-1">
+                <div class="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">Interactive Phoenix Die Simulator</div>
+                <div id="phoenixDiceResult" class="text-sm font-medium text-slate-900 dark:text-white">
+                  Roll the die to see how your Phoenix moves on Turn 3!
+                </div>
+              </div>
+              <button type="button" id="rollPhoenixDieBtn" class="shrink-0 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-cosmic-950 font-bold text-sm transition-transform active:scale-95 shadow-md shadow-amber-500/20">
+                🎲 Roll Phoenix Die
+              </button>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              <strong>Strategy:</strong> The game is a balance between playing normal chess and parking your Phoenix somewhere safe.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: Terra -->
+      <article data-pcat="engine" class="project-card glass-card rounded-3xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 relative min-h-[260px]">
+            <img src="assets/terra-voxel.jpg" alt="Terra voxel sandbox artwork" class="w-full h-full object-cover" />
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cosmic-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-semibold backdrop-blur-sm">
+              C++ &amp; Vulkan Sandbox
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-5">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-cyan-500">Voxel Sandbox · Advanced Graphics</div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">🌍 Terra</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                A significantly developed <strong>C++ and Vulkan-based voxel sandbox game</strong> — one of my most advanced games yet.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-cosmic-900/90 border border-slate-200 dark:border-slate-800">
+                <div class="font-semibold text-slate-900 dark:text-white">✨ Custom Dimension</div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Accessible through dedicated sigils and potions.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-cosmic-900/90 border border-slate-200 dark:border-slate-800">
+                <div class="font-semibold text-slate-900 dark:text-white">🛡️ Combat &amp; Shields</div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Several types of shields, including a throwable shield.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-100 dark:bg-cosmic-900/90 border border-slate-200 dark:border-slate-800 sm:col-span-2">
+                <div class="font-semibold text-slate-900 dark:text-white">⚗️ Original Fictional Metal</div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Features a custom metal type that doesn't exist in real life, blending my interest in materials and game design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Rift Runner -->
+      <article data-pcat="game" class="project-card glass-card rounded-3xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 relative min-h-[260px]">
+            <img src="assets/rift-runner.jpg" alt="Rift Runner synthwave canyon runner artwork" class="w-full h-full object-cover" />
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cosmic-950/80 border border-fuchsia-400/40 text-fuchsia-300 text-xs font-semibold backdrop-blur-sm">
+              Three.js · Web &amp; Android (APK / AAB)
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 space-y-5">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-fuchsia-500">3D Synthwave Canyon Runner</div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">🚀 Rift Runner</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                A 3D synthwave “canyon runner” built in a single HTML file with <strong>Three.js</strong>. Pilot a hovership down a neon canyon, thread through gates, dodge hazards, and survive as the speed ramps up. Packaged as an Android app (APK &amp; AAB) with an online leaderboard backend.
+              </p>
+            </div>
+
+            <!-- Interactive Sub-Tabs for Rift Runner -->
+            <div class="flex flex-wrap gap-2" id="riftTabs">
+              <button type="button" data-rifttab="gameplay" class="rift-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500 text-cosmic-950">Core Gameplay</button>
+              <button type="button" data-rifttab="campaign" class="rift-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-cosmic-800 text-slate-700 dark:text-slate-300">8-Planet Campaign</button>
+              <button type="button" data-rifttab="systems" class="rift-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-cosmic-800 text-slate-700 dark:text-slate-300">Modes, Revive &amp; Backend</button>
+            </div>
+
+            <div id="riftTabPanel" class="p-4 rounded-2xl bg-slate-100 dark:bg-cosmic-900/90 border border-slate-200 dark:border-slate-800 text-xs sm:text-sm space-y-2"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Additional Projects: Orbital Runner & Kaira Engine -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article data-pcat="game" class="project-card glass-card rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-2xl">🪐</span>
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-600 dark:text-emerald-300">Completed · 2026</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Orbital Runner</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            One of the original games I built and completed in 2026 as part of my growing catalog of self-made apps and games.
+          </p>
+        </article>
+
+        <article data-pcat="engine" class="project-card glass-card rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-2xl">⚙️</span>
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-amber-500/15 text-amber-600 dark:text-amber-300">In Development</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Kaira Engine</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            My own experimental game engine built with the goal of creating a powerful yet approachable environment for both 2D and 3D development.
+          </p>
+        </article>
+      </div>
+
+      <p class="text-center text-sm text-slate-500 dark:text-slate-400">
+        And there are a lot more apps, games, and experiments in progress at Satya's Studio.
+      </p>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 4: MIND, PERSONALITY, CURIOSITY, SKILLS & LEARNING   -->
+    <!-- ========================================================= -->
+    <section id="view-mind" class="view-section space-y-10">
+      <div class="space-y-2">
+        <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">04 · Mind &amp; Personality</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">How I Think, Learn &amp; Stay Curious</h2>
+      </div>
+
+      <!-- How I Think -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white">🧠 How I Think</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <div class="space-y-3">
+            <p>
+              I think <strong>analytically and creatively, but also emotionally</strong>. I believe emotions are beautiful because they make experiences meaningful, although they can sometimes lead to impulsive decisions. That is why analytical thinking is important to me: it helps me understand situations more clearly and make better decisions.
+            </p>
+            <p>
+              I enjoy exploring ideas beyond the boundaries of a standard textbook — extending into dinosaurs, paleontology, space, galaxies, nebulae, black holes, dark matter, quantum mechanics, materials, engineering, and 3D visualization.
+            </p>
+            <p>
+              When I encounter something interesting, I don't always want to stop at understanding what it does. I want to understand <strong>how it works, why it works</strong>, and whether I can use that knowledge to create something of my own.
+            </p>
+          </div>
+          <div class="space-y-3">
+            <p>
+              When I encounter something I don't understand, I try to approach it <strong>logically and analytically first</strong>. If that doesn't work, I approach it <strong>creatively</strong>, looking for different perspectives and ways of understanding the problem.
+            </p>
+            <p>
+              I prefer reasoning and creative problem-solving over physical experimentation, partly because school and time constraints limit what I can practically experiment with. However, I enjoy experimenting in other ways — many of my interests, including app development, chess, and cubing, began through exploration and experimentation.
+            </p>
+            <p>
+              I also have a <strong>competitive spirit</strong>. I enjoy improving, challenging myself, and seeing how far I can push my abilities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What Makes Me Curious -->
+      <div class="space-y-4">
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-cyan-500">Deep Interests</div>
+          <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white mt-1">What Makes Me Curious?</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">I am especially interested in things that go beyond what we encounter in everyday life.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="glass-card rounded-2xl p-5 space-y-2">
+            <div class="text-xl">🌌</div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white">Space &amp; Cosmology</h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Galaxies, nebulae, black holes, dark matter, the early universe, and the mysteries of the cosmos — understanding what they actually are, how they formed, and what we still don't know.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5 space-y-2">
+            <div class="text-xl">🦖</div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white">Paleontology &amp; Dinosaurs</h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Prehistoric life, evolution, anatomy, ancient ecosystems, and the fascinating history of life on Earth.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5 space-y-2">
+            <div class="text-xl">⚛️</div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white">Physics</h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Quantum mechanics, the fundamental workings of the universe, and the strange phenomena that emerge when we explore reality at different scales.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5 space-y-2">
+            <div class="text-xl">🏗️</div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white">Materials &amp; Engineering</h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Analyzing materials and imagining how their properties affect their strength, durability, weight, and practical applications.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5 space-y-2">
+            <div class="text-xl">💻</div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white">Technology &amp; Creation</h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Understanding software, hardware, game engines, graphics, and the systems that allow technology to function.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5 space-y-2">
+            <div class="text-xl">🧊</div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white">3D Visualization</h4>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Imagining objects, environments, structures, and concepts in three dimensions, and exploring how they could be designed or constructed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What Motivates Me -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">Core Drivers</div>
+          <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white mt-1">What Motivates Me?</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <div class="font-display font-bold text-amber-600 dark:text-amber-400">Fun</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Doing things that genuinely interest me so learning and creating remain enjoyable.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <div class="font-display font-bold text-cyan-600 dark:text-cyan-400">Purpose &amp; Impact</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Creating things that are useful, entertaining, meaningful, or capable of making an impact.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <div class="font-display font-bold text-emerald-600 dark:text-emerald-400">Mastery &amp; Growth</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Improving my abilities, learning new things, and becoming better at what I do.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <div class="font-display font-bold text-violet-600 dark:text-violet-400">Autonomy</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Valuing the freedom to explore ideas, choose my direction, and develop my own projects.</p>
+          </div>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-300 italic">
+          I don't want to simply follow a predetermined path. I want to explore different possibilities, discover what I'm capable of, and create things that reflect my own ideas.
+        </p>
+      </div>
+
+      <!-- Strengths & Weaknesses + Skills -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-5">
+          <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Strengths &amp; Weaknesses</h3>
+          <div class="space-y-3">
+            <div class="text-xs font-semibold uppercase tracking-wider text-emerald-500">My Strengths</div>
+            <div class="space-y-2.5 text-sm">
+              <div class="p-3 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+                <strong class="text-slate-900 dark:text-white">Persistence:</strong>
+                <span class="text-slate-600 dark:text-slate-300"> When a project hits a roadblock, I try different approaches, reconsider the problem, and keep working toward a solution.</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+                <strong class="text-slate-900 dark:text-white">Curiosity &amp; Knowledge:</strong>
+                <span class="text-slate-600 dark:text-slate-300"> I enjoy learning about subjects that interest me and exploring ideas beyond what I already know.</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+                <strong class="text-slate-900 dark:text-white">Fast Learning:</strong>
+                <span class="text-slate-600 dark:text-slate-300"> When something genuinely interests me, I can learn it quickly and become deeply involved in it.</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800">
+                <strong class="text-slate-900 dark:text-white">Analytical &amp; Creative Thinking:</strong>
+                <span class="text-slate-600 dark:text-slate-300"> Approaching problems logically while thinking creatively about non-obvious possibilities.</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-semibold uppercase tracking-wider text-rose-500">My Weaknesses</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              I struggle with learning subjects that I find extremely boring or difficult to stay interested in, particularly when they feel disconnected from my interests. I am still learning how to maintain consistency even when something isn't immediately enjoyable, because not everything worth learning will always be interesting.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+          <div>
+            <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Skills &amp; Current Learning</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+              <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/25">
+                <div class="font-display font-bold text-slate-900 dark:text-white text-sm">Creative Skills</div>
+                <div class="text-xs font-semibold text-amber-600 dark:text-amber-400 mt-1">Drawing · Game Concepts · Storytelling · Designing</div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5">Turning imagination into visual and creative projects.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/25">
+                <div class="font-display font-bold text-slate-900 dark:text-white text-sm">Scientific Interests</div>
+                <div class="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">Research · Dinosaur Knowledge · Scientific Curiosity</div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5">Exploring science, understanding concepts and investigating questions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2 border-t border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-semibold uppercase tracking-wider text-cyan-500">What I'm Learning Right Now</div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <li><strong class="text-slate-900 dark:text-white">♟️ Chess:</strong> Calculation, endgames, middlegames, positional understanding, and developing intuition.</li>
+              <li><strong class="text-slate-900 dark:text-white">🧩 Speedcubing:</strong> Increasing TPS, improving efficiency, refining CFOP, and learning PLL.</li>
+              <li><strong class="text-slate-900 dark:text-white">💻 Programming &amp; Game Dev:</strong> C++, graphics programming, rendering, mesh editing, sculpting, 3D modelling, texturing, and animation.</li>
+              <li><strong class="text-slate-900 dark:text-white">🦖 Paleontology:</strong> Evolution, anatomy, prehistoric ecosystems, and the history of ancient life.</li>
+              <li><strong class="text-slate-900 dark:text-white">🎨 Art:</strong> Drawing techniques, learning to draw faces, and developing visual design.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 5: MOVIE & CINEMATIC PROJECTS                        -->
+    <!-- ========================================================= -->
+    <section id="view-cinema" class="view-section space-y-8">
+      <div class="space-y-2">
+        <div class="text-xs font-semibold uppercase tracking-wider text-amber-500">05 · Storytelling &amp; Film</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">My Movie &amp; Cinematic Projects</h2>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl text-sm sm:text-base">
+          Expanding from apps, games, and art into full-scale solo animation and long-term cinematic worldbuilding.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Solo 3D Animated Film -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-5 border-t-4 border-t-amber-500">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-300 text-xs font-semibold">
+            🎬 Solo Production · In Preparation
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Moving Into Filmmaking</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            My creative ambitions are now expanding into filmmaking. I am preparing to begin creating a <strong>stylized 3D animated film entirely on my own</strong>.
+          </p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            From writing and directing to modelling, animation, environments, and editing, I intend to take on the entire production myself, with the possibility of voice actors helping with the characters.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">Writing</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">Directing</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">3D Modelling</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">Animation</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">Environments</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">Editing</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pt-2 border-t border-slate-200 dark:border-slate-800">
+            This is a completely different challenge from developing apps and games — combining storytelling, visual creativity, animation, technical skills, and turning an idea into an entire cinematic experience. I want to explore what I can achieve as a solo creator.
+          </p>
+        </div>
+
+        <!-- Live-Action Cinematic Universe -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-5 border-t-4 border-t-cyan-500">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-600 dark:text-cyan-300 text-xs font-semibold">
+            🌌 Long-Term Vision · Worldbuilding
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">A Cinematic Universe</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Beyond animation, I have developed ideas and plans for a <strong>future live-action cinematic universe</strong>.
+          </p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            The universe combines <strong>mythology, fantasy, and supernatural elements</strong>, weaving together interconnected stories, conflicts, characters, and ancient forces.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">⚡ Gods</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">🪓 Norse Mythology</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">🏛️ Greek Mythology</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">🔮 Witches</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">🦇 Vampires</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-cosmic-900 border border-slate-200 dark:border-slate-800 text-xs font-medium">🛡️ Heroes</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pt-2 border-t border-slate-200 dark:border-slate-800">
+            This is a long-term ambition. I intend to develop these ideas further as I grow, gain experience, and eventually have the resources to bring them to life on a much larger scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800/80 mt-16 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div>
+        <strong class="text-slate-800 dark:text-slate-200">Nallamilli Sri Venkat Satya Reddy</strong> · Satya's Studio · Andhra Pradesh, India
+      </div>
+      <div class="flex items-center gap-4">
+        <button type="button" data-nav="overview" class="hover:text-amber-500 transition-colors">Overview</button>
+        <button type="button" data-nav="journey" class="hover:text-amber-500 transition-colors">Journey</button>
+        <button type="button" data-nav="projects" class="hover:text-amber-500 transition-colors">Projects</button>
+        <button type="button" data-nav="mind" class="hover:text-amber-500 transition-colors">Mind &amp; Craft</button>
+        <button type="button" data-nav="cinema" class="hover:text-amber-500 transition-colors">Cinema</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
